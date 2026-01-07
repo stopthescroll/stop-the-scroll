@@ -65,7 +65,7 @@ ul {
 
 header{
     height:3rem;
-    background-color: #222222;
+    background-color: #181818;
     position: fixed;
     top: 0px;
     width: 100%;
@@ -155,9 +155,7 @@ nav {
     float: right;
     width: 12rem;
     shape-outside: polygon(14.44% 46.3%, 36.1% 58.61%, 76.5% -0.43%, 97.88% -0.64%, 68.22% 60.53%, 53.33% 48.86%, 41.98% 62.65%, 70.97% 79.35%, 56.84% 101.47%, -0.42% 68.87%);
-
 }
-
 
 
 .nonstop>p {
@@ -205,8 +203,8 @@ main{
     font-style: normal;
     font-size: 100%;
     text-align: left;
-    color: #ffffff;
-    background-color: #fc27a3;
+    color: #131F49;
+    background-color: #91d4d1;
     padding:0.2rem 0.8rem 0rem;
     margin-right:0.3rem;
     border-radius: 1rem;
@@ -214,15 +212,15 @@ main{
 }
 
 .subpush>p>a:visited{
-    color: #fc27a3;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #532768;
 }
 .subpush>p>a:hover{
     color: #131F49;
-    background-color: #b8b8b8;
+    background-color: #ffffff;
 }
 .subpush>p>a:focus{
-    color: #ffffff;
+    color: #ebd616;
     background-color: #000000;
 }
 .subpush>p>a:active{
@@ -368,7 +366,6 @@ main{
     clear:left; 
     font-size: 10pt;
     width: 400px;   
-    height: 200px;
     border-radius: 12px;
 }
 #mc-embedded-subscribe-form{ /* Form */
