@@ -373,21 +373,41 @@ main{
     padding: 1rem;
     margin-left:1rem;
 }
+
 div.mc-field-group {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
+#mc_embed_signup .mc-field-group { /* Higher specificity to override mailchimp */
+    display: flex !important;
+    align-items: center;
+}
+
+
 div.mc-field-group label{ /* Labels */
     color:#131F49;
     font-size: 14pt;
 }
+#mc_embed_signup .mc-field-group label { /* Higher specificity to override mailchimp */
+    display: inline-block !important;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+}
+
+
 div.mc-field-group input{ /* Input Fields */
     margin: 0.4rem;
     padding: 0.25rem;
     max-width: none;
     width: auto;
 }
+#mc_embed_signup .mc-field-group input { /* Higher specificity to override mailchimp */
+    display: inline-block !important;
+    width: auto !important;
+}
+
+
 input.button{ /* Submit Button */
     margin-top:0.5rem;
     padding:0.5rem;
@@ -409,6 +429,11 @@ input.button:active{
     background-color: #4b4f5c;
     color: #ffffff
 }
+
+
+
+
+
 footer{
     background-color: #ffffff;
     padding: 0rem 1rem 0rem; 
