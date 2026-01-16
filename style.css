@@ -52,6 +52,15 @@ p {
     font-size: 14pt;
     padding-bottom: 1rem;
 }
+ol {
+    text-align: left;
+    font-family: arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14pt;
+    padding-bottom: 1rem;
+}
+
 ul {
     text-align: left;
     font-family: arial, sans-serif;
@@ -184,89 +193,91 @@ main{
 .subpush {
     padding-top:1rem;
     padding-bottom: 3rem;
+    display: flex;
+    align-items: center;     /* Centers vertically */
+    flex-direction: column;  /* Ensures multiple lines stack vertically */
+
 }
 
-.subpush>p{
+.subbutton{
     margin-bottom: 0;
+    padding-bottom: 0.5rem;
     font-family: dunbar-tall, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 170%;
-    text-align: left;
-    color: #ffffff;
-    margin: 0rem;
-}
-
-.subpush>p>a{
-    font-family: dunbar-tall, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 100%;
+    font-size: 200%;
     text-align: left;
     color: #131F49;
-    background-color: #91d4d1;
-    padding:0.2rem 0.8rem 0rem;
-    margin-right:0.3rem;
-    border-radius: 1rem;
-    text-decoration: none
+    margin: 0rem;
+    margin-top: 0.8rem;
 }
 
-.subpush>p>a:visited{
+.subbutton>a{
+    background-color: #91d4d1;
+    color: #131F49;
+    padding:0.2rem 2rem 0.2rem;
+    
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.subbutton>a:visited{
     color: #ffffff;
     background-color: #532768;
 }
-.subpush>p>a:hover{
+.subbutton>a:hover{
     color: #131F49;
     background-color: #ffffff;
 }
-.subpush>p>a:focus{
+.subbutton>a:focus{
     color: #ebd616;
     background-color: #000000;
 }
-.subpush>p>a:active{
+.subbutton>a:active{
     color: #131F49;
     background-color: #ebd616;
 }
 .toouremail{
-    padding-top: 0rem;
+    padding: 0;
     margin: 0;
-    max-width: 25rem;
+    margin-bottom: 0;
+    font-family: dunbar-tall, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 150%;
+    text-align: left;
+    color: #ffffff;
 }
-.toouremail>p{
-    padding-left: 0;
+.knowthefacts{
+    padding-bottom:1rem;
 }
-
-
-.factgrid {
-    display: grid;
-	grid-template-columns: auto;
-    grid-template-rows: auto;
-    padding-bottom:4rem;
-    grid-gap:2rem;
-}
-
-.facthead{
-    grid-column: 1;
-    grid-row: 1;
-    
-}
-.fact1{
-    grid-column: 1;
-    grid-row: 2;
-}
-.fact2{
-    grid-column: 1;
-    grid-row: 3; 
+.factlist {
+  list-style: none;
+  counter-reset: fact;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding-left: 0;
 }
 
-.fact3{
-    grid-column: 1;
-    grid-row: 4; 
+.factlist li {
+  counter-increment: fact;
+  display: flex;
+  align-items: baseline; /* aligns the number with the first line of text */
+  gap: 0.75rem;          /* space after the number */
 }
-.fact4{
-    grid-column: 1;
-    grid-row: 5;    
+
+.factlist li::before {
+  content: counter(fact) ".";
+  font-family: dunbar-tall, sans-serif;
+  font-weight: 700;
+  font-size: 18pt;
+  color: #ebd616;
+  flex-shrink: 0;        /* ensures number does not shrink */
+  line-height: 1;         /* aligns nicely with text baseline */
 }
+
 .improvesec{
     background-color: #91d4d1;
     margin-left: calc(50% - 50vw);
@@ -497,6 +508,9 @@ h1{
     max-width: 60rem;
     padding-top: 2rem;
 }
+h2{
+    font-size: 220%;
+}
 
 .topimage>img{
     float: right;
@@ -508,7 +522,7 @@ h1{
 main{
     max-width: 55rem;
     margin: 0 auto;
-    padding: 0rem 1rem 0rem; 
+    padding: 0rem 1rem 0rem;
 }
 
 .introsec1{
@@ -516,34 +530,24 @@ main{
 }
 
 .subpush{
-    max-width: 45rem;
+    max-width: 53rem;
 }
 
-.factgrid{
-    grid-gap: 1rem;
+.subpush>.toouremail{
+    align-self: flex-start;
+    margin: 0;
+}
+
+.knowthefacts{
+    font-size:220%;
+}
+.factlist {
+    grid-template-columns: 1fr 1fr;
     column-gap: 4rem;
-    
+    row-gap: 1.5rem;
 }
-.facthead{
-    grid-column: 1/3;
-    grid-row: 1;
-}
-.fact1{
-    grid-column: 1;
-    grid-row: 2;
-}
-.fact2{
-    grid-column: 2;
-    grid-row: 2;    
-}
-.fact3{
-    grid-column: 1;
-    grid-row: 3;    
-}
-.fact4{
-    grid-column: 2;
-    grid-row: 3;        
-}
+
+
 
 
 .improvegrid {
