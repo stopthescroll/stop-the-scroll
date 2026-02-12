@@ -223,15 +223,15 @@ main{
 
 .subbutton>a:visited{
     color: #ffffff;
-    background-color: #532768;
+    background-color: #7d1c91;
 }
 .subbutton>a:hover{
     color: #131F49;
     background-color: #ffffff;
 }
 .subbutton>a:focus{
-    color: #ebd616;
-    background-color: #000000;
+    color: #ffffff;
+    background-color: #FF8C00;;
 }
 .subbutton>a:active{
     color: #131F49;
@@ -277,6 +277,32 @@ main{
   flex-shrink: 0;        /* ensures number does not shrink */
   line-height: 1;         /* aligns nicely with text baseline */
 }
+
+
+
+.footnote {
+  font-size: 0.75em;
+  vertical-align: super;
+  margin-left: 0.2em;
+}
+.footnote-link {
+    color: #91d4d1;    
+    text-decoration: none;
+}
+.footnote-link:hover {
+    color:#ffffff;
+}
+.footnote-link:visited {
+    color: #7d1c91;
+}
+.footnote-link:focus {
+    color: #FF8C00;
+}
+.footnote-link:active {
+    color: #ebd616;
+}
+
+
 
 .improvesec{
     background-color: #91d4d1;
@@ -344,7 +370,7 @@ main{
     margin: 0 auto;
     opacity:0;
     transition: opacity 0.4s ease;
-    padding: 0rem 1rem 3rem; 
+    padding: 0rem 1rem 5rem; 
 	grid-template-columns: 1fr;
     grid-gap: 1rem;
     grid-template-rows: auto;
@@ -357,6 +383,8 @@ main{
     grid-row: 1; 
     max-width: 26rem;
     margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
 }
 .emailhead>h2{
     color: #fc27a3;
@@ -381,7 +409,7 @@ main{
 }
 #mc-embedded-subscribe-form{ /* Form */
     display: grid;
-    padding: 1rem;
+    padding: 1rem 1.5rem 1.5rem 1rem;
     margin-left:1rem;
 }
 
@@ -413,9 +441,11 @@ div.mc-field-group input{ /* Input Fields */
     max-width: none;
     width: auto;
 }
+
 #mc_embed_signup .mc-field-group input { /* Higher specificity to override mailchimp */
-    display: inline-block !important;
-    width: auto !important;
+    flex: 1 1 auto !important;
+    min-width: 0;
+    width: 100% !important;
 }
 
 
@@ -442,19 +472,86 @@ input.button:active{
 }
 
 
+.sources {
+  padding-top: 4rem;
+padding-bottom: 4rem;
+  background-color: #131F49;
+}
+
+.sources h2 {
+  padding-bottom: 1rem;
+  
+}
+
+.sources li {
+  padding-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.sources a {
+  color: #91d4d1;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.sources a:visited {
+    color: #7d1c91;
+  text-decoration: underline;
+}
+.sources a:hover {
+    color:#ffffff;
+  text-decoration: underline;
+}
+
+.sources a:focus {
+    color: #FF8C00;
+  text-decoration: underline;
+}
+
+.sources a:active {
+    color: #ebd616;
+  text-decoration: underline;
+}
+
 
 
 
 footer{
-    background-color: #ffffff;
+    background-color: #131F49;
     padding: 0rem 1rem 0rem; 
 }
 footer>p{
     font-size: 10pt;
     text-align: center;
-    color:#131F49;
+    color:#ffffff;
     padding-bottom:1rem;
 }
+
+.cc-link {
+  color: #91d4d1;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.cc-link:visited {
+    color: #7d1c91;
+  text-decoration: underline;
+}
+.cc-link:hover {
+    color:#ffffff;
+  text-decoration: underline;
+}
+
+.cc-link:focus {
+    color: #FF8C00;
+  text-decoration: underline;
+}
+
+.cc-link:active {
+    color: #ebd616;
+  text-decoration: underline;
+}
+
+
+
 .license {
   width: fit-content;      /* shrink to one line */
   margin: 0 auto;          /* center it */
@@ -469,21 +566,25 @@ footer>p{
   margin-left: .2em;
 }
 
- .home footer{
-    background-color: #ffffff;
+.home footer{
+    background-color: #131F49;
     padding: 0rem 1rem 0rem; 
 }
 .about h1{
-    padding: 5rem 0 1rem;
+    padding: 5rem 0 2rem;
 }
- .about footer{
+.about footer{
     background-color: #131F49;
     color:#FFFFFF;
-    padding-top: 1rem;
+    padding-top: 3rem;
 }
 .about footer>p{
     color:#FFFFFF;
 }
+
+
+
+
 
 
 @media screen and (min-width: 50rem) {
